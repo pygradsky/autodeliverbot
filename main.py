@@ -13,9 +13,15 @@ load_dotenv()
 TOKEN = getenv('TOKEN')
 
 
+from handlers import __all_routers__
+
+
 async def main():
     bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
     dp = Dispatcher()
+
+    for router in __all_routers__:
+        dp.include_router(router)
 
     await dp.start_polling(bot)
 
