@@ -12,7 +12,6 @@ from os import getenv
 load_dotenv()
 TOKEN = getenv('TOKEN')
 
-
 from handlers import __all_routers__
 
 
