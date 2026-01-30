@@ -11,7 +11,6 @@ async def process_cmd_start(message: Message):
             "Я - бот, у которого ты можешь купить различные товары.\n"
             "Используй команды в меню, чтобы узнать больше!")
 
-
     await message.answer(
         text=text
     )
