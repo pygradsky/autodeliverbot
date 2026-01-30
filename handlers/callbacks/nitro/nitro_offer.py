@@ -26,7 +26,7 @@ async def process_nitro_offer_callback(callback_query):
         "📌 Nitro идеально подходит тем, кто активно использует Discord для общения, стриминга или создает собственные серверы."
     )
 
-    await callback_query.message.answer(
+    await callback_query.message.edit_text(
         text=text,
         parse_mode='Markdown',
         reply_markup=keyboard,

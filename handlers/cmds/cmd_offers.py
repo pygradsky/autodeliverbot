@@ -4,7 +4,7 @@ from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 router = Router()
 
-keyboard = InlineKeyboardMarkup(inline_keyboard=[
+offers_keyboard = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text='Discord Nitro', callback_data='nitro_offer')],
     [InlineKeyboardButton(text='Counter Strike 2', callback_data='cs2')],
 ])
@@ -16,5 +16,5 @@ async def process_cmd_offers(message: Message):
 
     await message.answer(
         text=text,
-        reply_markup=keyboard,
+        reply_markup=offers_keyboard,
     )

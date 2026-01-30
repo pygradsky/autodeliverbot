@@ -16,7 +16,7 @@ async def process_nitro_basic_callback(callback_query):
         "Если у вас есть вопросы, не стесняйтесь обращаться!"
     )
 
-    await callback_query.message.answer(
+    await callback_query.message.edit_text(
         text=text,
         parse_mode='Markdown',
     )
